@@ -36,6 +36,6 @@ You can get the interface module and network gateway using `ifconfig`(https://li
 
 ![Image of aush teste](http://brokeclothing.com.br/aushexample.png)
 
-## **I am a beginner in shell script language and this repo was my first contact with him, i wanna improve my knowledge in that and contribute efficiently with the community.
+###### I am a beginner in shell script language and this repo was my first contact with him, i wanna improve my knowledge in that and contribute efficiently with the community.
 
-## Questions and sugestions should be send to <slucasandrade@prontonmail.ch>**
+###### Questions and sugestions should be send to <slucasandrade@prontonmail.ch>.
