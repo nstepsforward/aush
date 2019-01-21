@@ -3,18 +3,24 @@
 This simple script was made to be used as an utilitary to deny traffic in your LAN using dsniff arpspoof.
 
 ## Prerequisites
+
+Be sure dSniff is installed.
+`apt-get install dsniff`
+
 Runned and tested on:
 
 ```
-[/home/lucas/Área de trabalho] # uname -a
+# uname -a
 Linux * 4.9.0-8-amd64 #1 SMP Debian 4.9.110-3+deb9u6 (2018-10-08) x86_64 GNU/Linux
 ```
 
 Should work on most Linux distributions.
 
-## "Install"
+## Install
 
-Actually there is no installation, getting the aush.sh to your machine, give the right permissions to the file and execute with root permissions.
+cd ~/$USER
+git clone https://github.com/nstepsforward/aush
+./aush.sh
 
 ## Running it
 
