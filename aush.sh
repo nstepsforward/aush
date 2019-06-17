@@ -1,19 +1,16 @@
 #!/bin/bash
 
-##########################################################"
-#                                                        #"
-#           aushv1.2 - dsniff arpspoof Utilitary         #"
-#                                                        #"
-# Created by Lucas Andrade <slucasandrade@protonmail.ch> #"
-#                                                        #"
-##########################################################"
+###########################################################"
+#  aushv1.2 - dsniff arpspoof Utilitary                   #"
+#                                                         #"
+#  Created by Lucas Andrade <slucasandrade@protonmail.ch> #"
+###########################################################"
 
 export RED='\033[1;91m'
 export ORIGIN='\033[1;00m'
 export BLUE='\033[1;94m'
 
 justSpoofing() {
-		
 		sleep 1
 		echo " "
 
@@ -31,12 +28,11 @@ justSpoofing() {
 		sleep 9999999
 }
 
-spoofingAndDenying() {
-		
+spoofingAndDenying() {		
 		sleep 1
 		echo " "
 
-		echo "Assigning 0 to port forward value to deny traffic...";sleep 1
+		echo "Assigning 0 to port forward value to deny requisition responses...";sleep 1
 		sysctl -w net.ipv4.ip_forward=0;sleep 2;echo " "
 
 		echo "Poisoning the ARP table with ARP replies...";sleep 2;echo " "
@@ -77,10 +73,10 @@ else
   	echo -n "> ";read option
   	case $option in
 		1)
-            #Getting variables
+            		#Getting variables
 			echo "Enter the interface module to be used:";read mod;echo " "
 			echo "Enter the network gateway:";read gw;echo " "
-    		echo "Enter the target IP:";read target;echo " "
+    			echo "Enter the target IP:";read target;echo " "
 
 			# Make sure variables are OK
 
@@ -106,7 +102,7 @@ else
 			#Getting variables
 			echo "Enter the interface module to be used:";read mod;echo " "
 			echo "Enter the network gateway:";read gw;echo " "
-    		echo "Enter the target IP:";read target;echo " "
+    			echo "Enter the target IP:";read target;echo " "
 
 			# Make sure variables are OK
 
@@ -123,7 +119,7 @@ else
 			fi
 			;;
 		4)
-            echo " "
+            		echo " "
 			echo "Under development, keep your eyes on https://github.com/nstepsforward/aush";echo " "
 			sleep 2
 			break
