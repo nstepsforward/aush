@@ -1,9 +1,9 @@
 #!/bin/bash
 
 ###########################################################"
-#  aushv1.2 - dsniff arpspoof Utilitary                   #"
+#  aush - dsniff arpspoof Utilitary                       #"
 #                                                         #"
-#  Created by Lucas Andrade <slucasandrade@protonmail.ch> #"
+#  Written by Lucas Andrade <slucasandrade@protonmail.ch> #"
 ###########################################################"
 
 export RED='\033[1;91m'
@@ -14,7 +14,7 @@ justSpoofing() {
 		sleep 1
 		echo " "
 
-		echo "Assigning 1 to port forward value to pass yourself off as gateway...";sleep 1
+		echo "Assigning 1 to port forward value to forward the packets...";sleep 1
 		sysctl -w net.ipv4.ip_forward=1;sleep 2;echo " "
 
 		echo "Poisoning the ARP table with ARP replies...";sleep 2;echo " "
@@ -47,9 +47,9 @@ spoofingAndDenying() {
 }
 
 echo " "
-echo -e "$BLUE #> This simple script was made to be used as an utilitary to deny traffic or MITM it in your LAN using dsniff arpspoof," >&2
+echo -e "$BLUE #> This simple script was made to be used as an utilitary to deny traffic or MITM it in your LAN using dsniff arpspoof." >&2
 echo -e " #> see https://www.mankier.com/8/arpspoof to more details." >&2
-echo -e " #> Improve code! Got in https://github.com/nstepsforward/aush" >&2
+echo -e " #> Improve the code! Got in https://github.com/nstepsforward/aush" >&2
 echo -e " #> Created by Lucas Andrade :) $ORIGIN" >&2
 echo " "
 
